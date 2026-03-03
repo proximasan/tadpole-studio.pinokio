@@ -1,0 +1,20 @@
+{
+  "title": "Tadpole Studio",
+  "description": "Local-first AI music generation studio powered by ACE-Step 1.5.",
+  "icon": "icon.png",
+  "links": [
+    {
+      "title": "Project",
+      "links": [
+        {
+          "title": "Tadpole Studio",
+          "value": "https://github.com/proximasan/tadpole-studio"
+        },
+        {
+          "title": "ACE-Step 1.5",
+          "value": "https://github.com/ace-step/ACE-Step-1.5"
+        }
+      ]
+    }
+  ]
+}

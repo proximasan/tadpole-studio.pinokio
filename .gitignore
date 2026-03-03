@@ -1,0 +1,15 @@
+app
+app/
+logs/
+.DS_Store
+
+# Pinokio-generated AI context files
+CLAUDE.md
+GEMINI.md
+AGENTS.md
+QWEN.md
+ENVIRONMENT
+.geminiignore
+.clinerules
+.cursorrules
+.windsurfrules
