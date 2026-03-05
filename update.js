@@ -31,11 +31,24 @@ module.exports = {
         message: "{{platform === 'darwin' ? 'echo Skipping CUDA torch on macOS' : 'uv pip install --reinstall-package torch --reinstall-package torchvision --reinstall-package torchaudio torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128'}}",
       },
     },
-    // 5. Reinstall frontend dependencies
+    // 5. Reinstall frontend dependencies (clean + hoisted layout for Next.js compat)
     {
       method: "shell.run",
       params: {
         path: "app/frontend",
+        env: {
+          npm_config_node_linker: "hoisted",
+        },
+        message: "{{platform === 'win32' ? 'if exist node_modules rmdir /s /q node_modules' : 'rm -rf node_modules'}}",
+      },
+    },
+    {
+      method: "shell.run",
+      params: {
+        path: "app/frontend",
+        env: {
+          npm_config_node_linker: "hoisted",
+        },
         message: "pnpm install --frozen-lockfile",
       },
     },
